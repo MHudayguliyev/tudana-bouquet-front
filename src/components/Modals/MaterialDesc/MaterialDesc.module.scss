@@ -1,0 +1,23 @@
+@use '.../../../../../styles/global.scss' as Global;
+
+.modalContainer {
+    min-height: 65vh;
+    width: 50vw;
+}
+
+.title {
+    color: black;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.attrName {
+    color: #E40050;;
+}
+
+.btnSave {
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,29 @@
+@use '../../styles/globalBreakPoints.scss' as *;
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalTypography.scss' as typography;
+
+* {box-sizing: border-box;}
+
+.search_container{
+    float: right;
+}
+
+.search_form {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: 1px solid silver;
+}
+.search_container .search_button{
+    float: right;
+    margin-top: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: silver;  
+    font-size: 34px;
+    padding: 2px;
+}
+
+.search_button:hover {
+    background: #ccc;
+  }

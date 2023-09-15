@@ -1,0 +1,320 @@
+@use '../../styles/globalBreakPoints.scss' as *;
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalTypography.scss' as typography;
+@use '../../styles/globalShapes.scss' as shapes;
+@use '../../styles/globalAnimation.scss' as Ganimation;
+
+
+.viewCards {
+   display: flex;
+   padding: 3px;
+   gap: 5px;
+   background-color:transparent;
+   border-radius: var(--border-radius);
+}
+.filterWrapper {
+   padding: 15px;
+}
+
+.filter {
+   display: flex;
+   height: 100%;
+   align-items: center;
+}
+
+.filterTitle {
+   margin-left: 5px;
+}
+
+.filterInput, .filterInputClients {
+   width: 250px;
+   display: flex;
+   justify-content: space-between;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   padding: 8px;
+}
+
+.filterInputClients {
+   width: 320px;
+}
+
+
+.minMaxInput {
+   display: flex;
+   justify-content: space-between;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   padding: 8px;
+}
+
+
+.dividerElement {
+   padding: 0 5px 0 5px;
+   margin: 0 15px 0 0px;
+   font-weight: typography.$fontWeightBold;
+}
+
+.icon {
+   width: 30px;
+   height: 30px;
+   font-size: 30px;
+   color: var(--main-color);
+}
+
+.filterSelectWrapper {
+   display: flex;
+   align-items:center;
+}
+
+.headInput {
+   display: flex;
+   justify-content: space-between;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   padding: 8px;
+   width: 100%;
+}
+.filterSelect {
+   min-width: 160px;
+   max-width: 160px;
+   margin-left: 10px;
+}
+
+.maxWidth {
+   width: 75px;
+   margin-right: 10px;
+}
+.minWith {
+   width: 15px;
+   // margin-right: 10px;
+   text-align: end;
+}
+
+
+
+.selectionWrapper {
+   margin-top: 10px;
+   display: flex;
+   justify-content: space-between;
+
+   @media screen and (max-width: $tablet) {
+      padding: 10px 0;
+      flex-direction: column;
+      row-gap: 10px;
+   }
+}
+
+.selectionFilter {
+   position: relative;
+   display: flex;
+   height: 100%;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.arrowUp {
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   top: 1.4rem;
+   left: 15px;
+   z-index: 1000;
+}
+
+.toolTip {
+   position: absolute;
+   top: 5vh;
+   left: -6px;
+   border-radius: var(--border-radius - 5px);
+   padding: 10px;
+   margin: 5px;
+   z-index: 999;
+   background-color: var(--cart-checked-bg-light);
+}
+
+
+.selection {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+
+   @media screen and (max-width: $mobile) {
+      flex-wrap: wrap;
+   }
+}
+
+.printBtnWrapper {
+   display: flex;
+   align-items: center;
+   font-size: toRem(typography.$fontSizeMedium);
+   font-weight: toRem(typography.$fontWeightMedium);
+   border-radius: var(--border-radius);
+   background-image: linear-gradient(to right,
+         var(--main-color),
+         var(--second-color));
+   color: var(--txt-white);
+   padding: 8px;
+}
+
+.printBtnIcon {
+   margin-right: 10px;
+   font-size: 1.2rem;
+}
+
+.print {
+   width: 115px;
+}
+
+.pinClear {
+   @media screen and (max-width: $tablet) {
+      display: none;
+   }
+}
+
+
+.filterFix {
+   position: fixed;
+   width: 100%;
+   padding-right: $sidebarWidthClose + 60;
+   top: calc(var(--topnav-height) + 30px);
+   left: $sidebarWidthClose + 30;
+
+   @media screen and (max-width: $minDesktop) {
+      top: calc(var(--topnav-height) + 20px);
+      left: $sidebarWidthClose + 15;
+      padding-right: $sidebarWidthClose + 30;
+   }
+
+   @media screen and (max-width: $tablet) {
+      top: calc(var(--topnav-height) + 20px);
+      left: $sidebarWidthCloseMin + 15;
+      padding-right: $sidebarWidthCloseMin + 30;
+   }
+
+   z-index: shapes.$fixedOrderFilterZIndex;
+}
+
+.printItem {
+   padding: 10px;
+   cursor: pointer;
+
+   &:hover {
+      background-color: var(--button-text-hover);
+   }
+}
+
+.selectDeletion {
+   outline: none;
+   height: 35px;
+   width: auto;
+   border-radius: 7px;
+   border: 1px solid #ccc;
+   padding: 5px;
+   font-size: toRem(typography.$fontSizeBig);
+   color: var(--txt-color);
+   margin: 4.5px 3px 0 3px;
+   background-color: transparent;
+}
+
+.mfdWrapper {
+   display: flex;
+   align-items: center;
+   height: 35px;
+   font-size: toRem(typography.$fontSizeBig);
+}
+
+.menu {
+
+   @media screen and (max-width: $minDesktop){
+      display: none;
+    }
+}
+.burgerMenu{
+   display: none;
+   @media screen and (max-width: $minDesktop){
+     display: block;
+   }
+  }
+
+  .filterHead {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     padding-bottom: 15px;
+      row-gap: 15px;
+     align-items: center;
+     border-bottom: 1px solid #ccc;
+  }
+  .filterBody {
+   padding-top: 15px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+  }  
+  .headFirstSection {
+      display: flex;
+      align-items: inherit;
+      gap: 15px;
+  }
+  .headSecondSection {
+      display: flex;
+        justify-content: flex-end;
+      margin-bottom: 15px;
+      gap: 15px;
+  }
+
+  .printBody {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+  }
+  .headBtn {
+     cursor: pointer;
+  }
+  .active{
+     cursor: pointer;
+     color: var(--main-color);
+     border-bottom: var(--main-color)
+  }
+
+  .activeSection {
+      height: 100%;
+      padding-top: 10px;
+      @media screen and (max-width: 768px) {
+         margin-bottom: 15px;
+      }
+  }
+  .borderBtm {
+     border-bottom: 1px solid var(--main-color)
+  }
+
+.twoXBtn {
+   margin-right: 5px;
+   display: block;
+
+   @media screen and (min-width: $tvDesktop) {
+      display: none;
+   }
+}
+
+.fourXBtn {
+   margin-left: 5px;
+   display: none;
+   color: white;
+
+   @media screen and (min-width: $tvDesktop) {
+      display: block;
+   }
+}
+
+.fourXBtn .grid4xImg {
+   color: white;
+}
+
+.printBtnGroup {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 5px;
+}

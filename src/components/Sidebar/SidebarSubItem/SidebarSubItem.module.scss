@@ -1,0 +1,40 @@
+.sidebar__sub_item {
+   padding: 0 10px;
+   margin-top: 8px;
+}
+
+.sidebar__sub_item_inner {
+   padding: 10px 10px;
+   flex-direction: row;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   font-weight: 600;
+   transition: color 0.3s ease 0s;
+
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   &:hover {
+      color: var(--main-color);
+   }
+}
+
+.sidebar__sub_item_inner>i {
+   font-size: 1.4rem;
+}
+
+.sidebar__sub_item_inner>span {
+   text-transform: capitalize;
+   margin-left: 8px;
+   font-weight: bold;
+   font-size: 14px;
+}
+
+.active {
+   border-radius: var(--border-radius);
+   background-image: linear-gradient(to right,
+         var(--main-color),
+         var(--second-color));
+   color: var(--txt-white);
+}

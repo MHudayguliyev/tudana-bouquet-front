@@ -1,0 +1,17 @@
+.buttonsWrap {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 17px;
+}
+.delModal {
+  max-width: 420px;
+}
+.bodyTxt {
+  color: var(--txt-color)
+}
+
+h2 {
+  color: var(--txt-color);
+}

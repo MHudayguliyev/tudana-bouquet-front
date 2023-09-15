@@ -1,0 +1,56 @@
+@use '../../styles/globalBreakPoints.scss' as *;
+
+.layout {
+   color: var(--txt-color);
+   padding-left: $sidebarWidth;
+   padding-left: $sidebarWidthClose;
+   @media screen and (max-width: $tablet) {
+      padding-left: $sidebarWidthCloseMin;
+   }
+   @media screen and (max-width: 600px) {
+      padding-left: 0;
+   }
+}
+
+.layoutContent {
+   background-color: var(--second-bg);
+   min-height: 100vh;
+   overflow: hidden;
+}
+
+.layoutPage {
+   margin-top: 70px;
+   scroll-behavior: smooth;
+   scrollbar-color: var(--main-color);
+   overflow: auto;
+   height: calc(100vh - 70px);
+   padding: 1.25rem;
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    right: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--main-color);
+  }
+   @media screen and (max-width: $minDesktop) {
+      padding: 15px;
+      padding-top: 20px;
+   }
+}
+
+.sideBar {
+   @media screen and (max-width: 600px) {
+      display: none;
+   }
+}
+
+

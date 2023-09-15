@@ -1,0 +1,186 @@
+@use '../../styles/globalBreakPoints.scss' as *;
+@use '../../styles/globalShapes.scss' as shapes;
+@use '../../styles/globalTypography.scss' as typography;
+@use '../../styles/globalFunctions.scss' as *;
+
+.orderList {
+   margin-bottom: 60px;
+}
+.orderListFixed {
+   height: calc(100vh - 150px);
+}
+.ordersFix {
+   height: calc(100vh - 340px);
+   margin-top: 20px;
+   padding-bottom: 60px;
+   scrollbar-width: thin;
+   scroll-behavior: smooth;
+   scrollbar-color: var(--theme) #edf2f7;
+   overflow-y: overlay;
+   overflow-x: hidden;
+   &::-webkit-scrollbar {
+      width: 8px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track {
+      right: 5px;
+      border-radius: 5px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track-piece {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+    }
+    @media screen and (max-width: $minDesktop){
+      height: auto;
+    }
+    @media screen and (max-width: $tablet) {
+       height: calc(100vh - 200px);
+       padding-bottom: 80px;
+       margin: 0;
+    }
+}
+.ordersNotFix {
+   margin-top: 20px;
+   @media screen and (max-width: $tablet) {
+      margin: 0;
+      padding-bottom: 40px;
+   }
+}
+.filterFixed {
+   @media screen and (max-width: $minDesktop) {
+      padding-top: 210px;
+   }
+
+   @media screen and (max-width: $tablet) {
+      padding-top: 70px;
+   }
+}
+
+.fixContentWrapper {
+   border: 1px solid red;
+   height: 75vh;
+   margin: 20px 0 0 0;
+   scrollbar-width: thin;
+   scroll-behavior: smooth;
+   scrollbar-color: var(--theme) #edf2f7;
+   overflow-y: overlay;
+   overflow-x: hidden;
+   &::-webkit-scrollbar {
+     width: 8px;
+     background-color: transparent;
+   }
+   &::-webkit-scrollbar-track {
+     right: 5px;
+     border-radius: 5px;
+     background-color: transparent;
+   }
+   &::-webkit-scrollbar-track-piece {
+     background: transparent;
+   }
+   &::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+   }
+}
+
+.ordersFooter {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   z-index: shapes.$fixedOrderFooterZIndex;
+   background-color: var(--main-bg);
+   box-shadow: var(--box-shadow);
+   padding: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: $sidebarWidthClose + 15px;
+
+   @media screen and (max-width: $tablet) {
+      padding-left: $sidebarWidthCloseMin + 10px;
+      flex-wrap: wrap;
+      row-gap: 10px;
+   }
+
+}
+
+.ordersStatistic {
+   display: flex;
+
+   @media screen and (max-width: $tablet) {
+      flex-wrap: wrap;
+      flex: 0 0 100%;
+      row-gap: 5px;
+      justify-content: space-between;
+   }
+}
+
+.footerStatistic {
+   display: flex;
+   align-items: center;
+
+   &:not(:last-child) {
+      margin-right: 20px;
+   }
+}
+
+.footerStatisticIcon,
+.footerStatisticIconBlue {
+   font-size: 1.3rem;
+   padding-right: 5px;
+}
+
+.footerStatisticIconBlue {
+   color: var(--main-color-blue);
+}
+
+.footerStatisticInfo {
+   font-size: toRem(typography.$fontSizeMedium);
+}
+
+.ordersPagination {
+   width: 100%;
+   display: flex;
+   align-items: center;
+
+   justify-content: flex-end;
+   @media screen and (max-width: $tablet) {
+      justify-content: space-between;
+   }
+}
+
+.statisticSelectionMode,
+.statistic {
+   display: flex;
+}
+
+.statisticSelectionMode {
+   padding-right: 10px;
+
+   @media screen and (max-width: $mobile) {
+      flex: 0 0 100%;
+   }
+}
+
+.statistic {
+   @media screen and (max-width: $mobile) {
+      flex: 0 0 100%;
+   }
+}
+
+.noData {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 100px;
+      font-size: 1.5rem
+}
+.noData > i {
+   margin-bottom: 10px;
+   font-size: 3rem;
+}

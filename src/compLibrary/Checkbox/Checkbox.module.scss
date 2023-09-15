@@ -1,0 +1,90 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalAnimation.scss' as Ganimation;
+@use '../../styles/globalTypography.scss' as Gtypography;
+
+.checkboxWrapper {
+   display: flex;
+   align-items: center;
+}
+
+.baseStyle {
+   width: max-content;
+   height: max-content;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   cursor: pointer;
+   -webkit-tap-highlight-color: transparent;
+}
+
+.baseStyle:hover:not(.disabled) {
+   background-color: transparentize($color: #ccc, $amount: 0.8);
+}
+
+.paddingSmall {
+   padding: toRem(2);
+}
+
+.paddingMedium {
+   padding: toRem(4);
+}
+
+.paddingBig {
+   padding: toRem(6);
+}
+
+
+.checkBoxInput {
+   display: none;
+}
+
+.iconCheck {
+   animation: iconCheckAnimation Ganimation.$duration ease;
+}
+
+@keyframes iconCheckAnimation {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(1.5);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+.labelStyles {
+   width: 100%;
+   cursor: pointer;
+   font-weight: Gtypography.$fontWeightRegular;
+   font-size: toRem(Gtypography.$fontSizeMedium);
+   line-height: toRem(Gtypography.$lineHeightMedium);
+   -webkit-touch-callout: none;
+   /* iOS Safari */
+   -webkit-user-select: none;
+   /* Safari */
+   -khtml-user-select: none;
+   /* Konqueror HTML */
+   -moz-user-select: none;
+   /* Old versions of Firefox */
+   -ms-user-select: none;
+   /* Internet Explorer/Edge */
+   user-select: none;
+   /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+   user-select: none;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+}
+
+.disabled {
+   cursor: auto;
+   opacity: 0.5;
+}
+.removePadding {
+   padding: 0 !important;
+}

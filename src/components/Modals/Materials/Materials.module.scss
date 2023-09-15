@@ -1,0 +1,134 @@
+@use "../../../styles/globalBreakPoints.scss" as *;
+
+.materialModalBody {
+  // width: 1400px;
+  height: 60vh;
+  padding: 0 10px;
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+  @media screen and (max-width: $desktop) {
+    // width: 960px;
+    width: auto;
+  }
+  @media screen and (max-width: $minDesktop) {
+    // width: 720px;
+    height: auto;
+  }
+  @media screen and (max-width: $tablet) {
+    // width: 500px;
+    height: auto;
+  }
+  @media screen and (max-width: $mobile) {
+    // width: 465px;
+    width: auto;
+    height: auto;
+  }
+}
+
+.customTable {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.modalHeaderWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+.modalHeaderWrapper {
+  @media screen and (max-width: $mobile) {
+      flex-direction: column;
+      align-items: start;
+  }
+}
+
+.modalHeaderWrapper h3 {
+  width: auto;
+  font-weight: bold;
+}
+
+.searchStyle {
+  width: 40%;
+  height: 3rem;
+  padding: 2px 15px;
+  background-color: transparent;
+  color: var(--txt-color);
+  border: 0.7px solid rgb(226, 226, 226);
+  border-radius: 15px;
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+  }
+}
+.searchStyle::placeholder {
+  color: var(--txt-color);
+}
+.materialModalBody {
+  height: 50vh;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--theme) #edf2f7;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    right: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+}
+
+#materialModalBody::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 3px;
+}
+
+#materialModalBody::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+#materialModalBody::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.materialsModalFooter {
+  // width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 15px;
+  @media screen and (max-width: $desktop) {
+    width: auto;
+  }
+  // @media screen and (max-width: $minDesktop) {
+  //   width: 720px;
+  // }
+  // @media screen and (max-width: $tablet) {
+  //   width: 500px;
+  // }
+  // @media screen and (max-width: $mobile) {
+  //   // width: 470px;
+  //   width: auto;
+  // }
+
+
+
+  .buttonWrapperRight {
+    margin-right: 15px;
+    display: flex;
+    gap: 15px;
+  }
+}

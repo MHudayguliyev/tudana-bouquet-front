@@ -1,0 +1,19 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalTypography.scss' as Gtypography;
+
+.modalTitle {
+   margin: auto;
+   font-weight: Gtypography.$fontWeightMedium;
+   font-size: toRem(Gtypography.$fontSizeBig);
+   line-height: toRem(Gtypography.$lineHeightMedium);
+   color: var(--txt-color);
+}
+
+.modalBody {
+   max-width: toRem(650);
+   color: var(--txt-color);
+}
+
+.footerBtn {
+   width: toRem(250);
+}

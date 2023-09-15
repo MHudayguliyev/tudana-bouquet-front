@@ -1,0 +1,302 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/globalBreakPoints.scss' as *;
+@use '../../styles/globalShapes.scss' as Gshapes;
+@use "../../styles/fonts.scss";
+
+.imageLabel {
+    border: 1px dashed white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageLabel span {
+    font-size: 12px;
+}
+
+.imageLabel:hover {
+    cursor: pointer;
+}
+
+.imageLabel:active {
+    transform: scale(.9);
+    transition: .9s ease;
+}
+
+.imagePreviewsWrapper {
+    display: flex;
+}
+
+
+.imageListWrapper {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.imageListWrapper>div img {
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.imageListWrapper>div {
+    position: relative;
+}
+
+.imageListWrapper>div button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: darkred;
+    color: white;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+
+}
+
+.formDivWrapper {
+    width: 70%;
+
+}
+
+.formDivWrapper>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formDivWrapper>div>div {
+    width: 100%;
+    margin: 15px 10px;
+}
+
+.formDivWrapper>div>div input {
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+
+}
+
+.imgUpload {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+.imageUploaderWrapper {
+    width: 100%;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modalFooter>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.imgWrapperDivDefault {
+    border: 2.5px solid transparent;
+    user-select: none;
+
+}
+
+.imgWrapperDivDefault:hover {
+    cursor: pointer;
+}
+
+.imageCover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+.imgWrapperDivDefault:hover .imageCover {
+    visibility: visible;
+}
+
+.imgWrapperDiv {
+    border: 2.5px solid green;
+    border-radius: 15px;
+}
+
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    overflow-y: auto;
+    height: 60vh;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--theme) #edf2f7;
+    &::-webkit-scrollbar {
+        width: 8px;
+        background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-track {
+        right: 5px;
+        border-radius: 15px;
+        background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-track-piece {
+        background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+}
+
+
+.mainContainer::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 3px;
+  }
+  
+  .mainContainer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  .mainContainer::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+
+  
+::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+
+.sectionsWrapper {
+    display: flex;
+    width: 100%;
+}
+
+.mainContainer section {
+    // border: 1px solid white;
+    padding: 10px 15px;
+}
+
+.imageSection {
+    width: 40%;
+    border-right: .5px dashed gray;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dataSection {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dataSection form>div input {
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.dataSection form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.halfDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.halfDiv>div {
+    width: 100%;
+}
+
+
+.dropdownWrapperStyle {
+    border: .7px solid grey;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+@media screen and (max-width: $tablet) {
+    .mainContainer {
+        flex-direction: column;
+    }
+
+    .mainContainer section {
+        width: 100%;
+    }
+}
+
+.noImagesAll {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textareaLength {
+    float: right;
+}
+
+.emptySection {
+    height: 15px;
+}
+
+.errorTxt {
+    color: var(--main-color-red);
+    margin-bottom: 15px
+}

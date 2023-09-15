@@ -1,0 +1,176 @@
+@use '../../styles/globalBreakPoints.scss' as *;
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalTypography.scss' as typography;
+@use '../../styles/globalShapes.scss' as shapes;
+
+
+
+.filterFix {
+    position: fixed;
+    width: 100%;
+    padding-right: $sidebarWidthClose + 60;
+    top: calc(var(--topnav-height) + 30px);
+    left: $sidebarWidthClose + 30;
+    display: block;
+    @media screen and (max-width: $minDesktop) {
+       top: calc(var(--topnav-height) + 20px);
+       left: $sidebarWidthClose + 15;
+       padding-right: $sidebarWidthClose + 30;
+    }
+    @media screen and (max-width: $tablet) {
+      //  top: calc(var(--topnav-height) + 20px);
+      //  left:15px;
+      // padding-right: 30px;
+      // display: none;
+    }
+ 
+    z-index: shapes.$fixedOrderFilterZIndex;
+
+ }
+
+ .burgerMenu {
+  display: none;
+  @media screen and (max-width: $tablet){
+    display: block;
+  }
+ }
+
+ .pinClear {
+    @media screen and (max-width: $tablet) {
+       display: none;
+    }
+ }
+
+.headWrapper {
+    background: transparent;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    @media screen and (max-width: 900px) {
+      flex-direction: column-reverse;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    @media screen and (max-width: $tablet){
+      display: none;
+    }
+  }
+  .addClient {
+    display: block;
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+  .addClient2 {
+    display: none;
+    @media screen and (max-width: $tablet) {
+      display: block;
+    }
+  }
+
+  .searchCol {
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+  .searchInput {
+     position: relative;
+     max-width: 300px;
+  }
+  .searchIcon {
+    position: absolute;
+    right: 6%;
+    top: 30%;
+    cursor: pointer;
+
+}
+.filterInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: var(--txt-color);
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+  }
+  .filterSelect {
+    // min-width: 120px;
+    width: 200px;
+    @media screen and (max-width: $tablet) {
+      width: 200px;
+    }
+  }
+  
+  .gridIcon {
+   position: relative;
+   display: inline-block;
+ }
+ .listIcon {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .gridText {
+   visibility: hidden;
+   width: 50px;
+   background-color: #fff;
+   border: 1px solid #ccc;
+   color: black;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+   // top: 100%;
+   transform: translateY(100%);
+   right: -50px;
+   margin-left: -60px;
+ }
+ .gridIcon {
+   &:hover {
+     .gridText {
+       visibility: visible;
+     }
+   }
+ }
+ .listIcon {
+   &:hover {
+     .gridText {
+       visibility: visible;
+     }
+   }
+ }
+ 
+ 
+.searchStyle { 
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+
+
+.pinIcon {
+  display: block;
+  @media screen and (max-width:$tablet){
+    display: none;
+  }
+}
+.filterIcon {
+  @media screen and (max-width:$tablet){
+    display: none;
+  }
+}
+.clientSort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

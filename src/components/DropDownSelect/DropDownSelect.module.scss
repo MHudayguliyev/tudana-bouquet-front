@@ -1,0 +1,84 @@
+@use '../../styles/globalTypography.scss' as typography;
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/fonts.scss';
+
+.toggleWrapper {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.toggleWrapper>i {
+   font-size: 1.5rem;
+}
+
+.toggleTitle {
+   font-family: 'Nunito';
+   font-weight: 500;
+   margin-right: 5px;
+   font-size: toRem(typography.$fontSizeBig);
+}
+
+.singleLine {
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+}
+
+.customElementWrapper {
+   padding: 12px;
+   // overflow-y: auto;
+   // min-height: 20vh;
+}
+
+.searchWrapper {
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   padding: 5px;
+}
+
+.itemsWrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+.iconWrapper {
+   width: 1.5rem;
+   height: 1.5rem;
+}
+
+.iconWrapper>i {
+   font-size: 1.5rem;
+}
+
+.icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 26px;
+   height: 26px;
+   font-size: 26px;
+}
+
+.itemsWrapper {
+   // margin-top: 10px;
+   padding-top: 5px;
+}
+
+.preloader {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100px;
+}
+
+.item {
+   cursor: pointer;
+   padding: 8px 8px;
+   border-radius: 8px;
+}
+
+.item:hover {
+   background-color: rgba(204, 204, 204, 0.2);
+}

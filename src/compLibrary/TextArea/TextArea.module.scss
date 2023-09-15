@@ -1,0 +1,42 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalTypography.scss' as Gtypography;
+@use '../../styles/globalShapes.scss' as Gshapes;
+@use '../../styles/fonts.scss';
+
+.textAreaStyles {
+   outline: none;
+   resize: none;
+   padding: toRem(10);
+   font-weight: Gtypography.$fontWeightRegular;
+   font-size: toRem(Gtypography.$fontSizeMedium);
+   line-height: toRem(Gtypography.$lineHeightMedium);
+   border: toRem(1) solid #ccc;
+   border-radius: var(--border-radius);
+   width: 100%;
+   background-color: var(--main-bg);
+   color: var(--text-color);
+   font-family: "Nunito", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+.annuleRightBorder {
+   border-top-right-radius: 0;
+   border-bottom-right-radius: 0;
+}
+
+.centerWidth {
+   width: 80%;
+}
+
+.textAreaStyles::placeholder {
+   color: var(--txt-placeholder);
+}
+
+.fullWidth {
+   width: 100%;
+}
+
+.fullHeight {
+   height: 100%;
+}

@@ -1,0 +1,130 @@
+/* nunito-regular - latin_cyrillic-ext_cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/Panton-Regular.ttf'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/Panton-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Panton-Regular.ttf') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/Panton-Regular.ttf') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Panton-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Panton-Regular.svg#Nunito') format('svg'); /* Legacy iOS */
+  }
+  /* nunito-600 - latin_cyrillic-ext_cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../assets/fonts/Panton-Bold.ttf'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/Panton-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Panton-Bold.ttf') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/Panton-Bold.ttf') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Panton-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Panton-Bold.svg#Nunito') format('svg'); /* Legacy iOS */
+  }
+  /* nunito-500 - latin_cyrillic-ext_cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets/fonts/Panton-SemiBold.ttf'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/Panton-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Panton-SemiBold.ttf') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/Panton-SemiBold.ttf') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Panton-SemiBold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Panton-SemiBold.svg#Nunito') format('svg'); /* Legacy iOS */
+  }
+  /* nunito-700 - latin_cyrillic-ext_cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/Panton-Bold.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/Panton-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Panton-Bold.ttf') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/Panton-Bold.ttf') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Panton-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Panton-Bold.svg#Nunito') format('svg'); /* Legacy iOS */
+  }
+  /* nunito-800 - latin_cyrillic-ext_cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800.svg#Nunito') format('svg'); /* Legacy iOS */
+  }
+  /* nunito-900 - latin_cyrillic-ext_cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-900.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-900.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-900.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-900.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-900.svg#Nunito') format('svg'); /* Legacy iOS */
+  }
+  /* nunito-italic - latin_cyrillic-ext_cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-italic.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-italic.svg#Nunito') format('svg'); /* Legacy iOS */
+  }
+  /* nunito-500italic - latin_cyrillic-ext_cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 500;
+    src: url('../assets/fonts/Panton-LightitalicCaps.otf'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/Panton-LightitalicCaps.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Panton-LightitalicCaps.otf') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/Panton-LightitalicCaps.otf') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Panton-LightitalicCaps.otf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Panton-LightitalicCaps.svg#Nunito') format('svg'); /* Legacy iOS */
+  }
+  /* nunito-700italic - latin_cyrillic-ext_cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../assets/fonts/Panton-LightitalicCaps.otf'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/Panton-LightitalicCaps.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Panton-LightitalicCaps.otf') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/Panton-LightitalicCaps.otf') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Panton-LightitalicCaps.otf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Panton-LightitalicCaps.svg#Nunito') format('svg'); /* Legacy iOS */
+  }
+  /* nunito-800italic - latin_cyrillic-ext_cyrillic */
+  @font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 800;
+    src: url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800italic.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/nunito-v24-latin_cyrillic-ext_cyrillic-800italic.svg#Nunito') format('svg'); /* Legacy iOS */
+  }

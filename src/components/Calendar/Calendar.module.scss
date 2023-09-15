@@ -1,0 +1,30 @@
+
+@use '../../../node_modules/react-big-calendar/lib/sass/agenda.scss';
+@use '../../../node_modules/react-big-calendar/lib/sass/event.scss';
+@use '../../../node_modules/react-big-calendar/lib/sass/variables.scss';
+@use '../../../node_modules/react-big-calendar/lib/sass/styles.scss';
+
+// @use '../../../node_modules/react-big-calendar/lib/sass/month.scss';
+// // @use 'react-big-calendar/lib/addons/dragAndDrop/styles'; // if using DnD
+// @use '../../../node_modules/react-big-calendar/lib/addons/dragAndDrop/styles'; 
+
+.calendar {
+    padding: 15px;
+    height: 100%;
+}
+.headTxt {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropDown {
+    border: 1px solid #ccc;
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+}

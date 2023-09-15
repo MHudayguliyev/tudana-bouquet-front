@@ -1,0 +1,230 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalBreakPoints.scss' as *;
+@use '../../styles/globalTypography.scss' as typography;
+
+.makeOrderWrapper {
+    padding: 10px;
+    // height: 100%;/
+    // height: calc(100vh - 233px);
+
+}
+.makeOrderSection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tableHeadWrapper {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    // margin-bottom: 15px;
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+}
+.tabelBurgerMenu {
+    display: none;
+    @media screen and (max-width: 600px) {
+        display: block;
+    }
+}
+
+.addBtn {
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+}
+
+.headerRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.headerView {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    // @media screen and (max-width :400px) {
+    //     display: none;
+    // }
+}
+.headerRowChild {
+    // flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    @media screen and (max-width: 400px) {
+        flex-direction:column;
+        align-items: start;
+    }
+}
+
+.table {
+    margin-top: 5px;
+    height: calc(100vh - 260px);
+    border-collapse: collapse;
+    z-index: -300;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--main-color);
+    overflow-y: overlay;
+    overflow-x: hidden;
+    // margin: 0;
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track {
+      right: 5px;
+      border-radius: 5px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track-piece {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+    }
+}
+.calendar::-webkit-calendar-picker-indicator {
+    // width: 100%;
+    // margin: 0;
+}
+
+.searchWrapper {
+    // width: 30%;
+    // margin-left: auto;
+    // padding: 16px;
+    display: flex;
+    align-items: center;
+    // padding-bottom: 0;
+    border-radius: 8px;
+    @media screen and (max-width: 600px){
+        // flex: 1;
+        // width: auto;
+        display: none;
+
+    }
+    .searchInp {
+      border: 1px solid #ccc;
+      padding: 8px;
+      // margin-top: 10px;
+      border-radius: 8px;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    // position: fixed;
+    // top: 0;
+  }
+
+.makeOrderSideBarWrapper {
+    padding: 15px;
+    height: 100%;
+}
+
+.sideBarInput {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.input {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inputIcon {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.inputPaper {
+    margin-left: 10px;
+}
+
+.addViewClientBtns {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+.orderStatistic {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+
+
+
+.container {
+    height: calc(100vh - 133px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}   
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.divider {
+    border-bottom: 1px solid var(--txt-placeholder);
+}
+
+.makeOrderLayout {
+    height: 100%;
+}
+
+.grid {
+    padding: 15px;
+    height: calc(100vh - 260px);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--main-color);
+    overflow-y: overlay;
+    overflow-x: hidden;
+    // margin: 0;
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track {
+      right: 5px;
+      border-radius: 5px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track-piece {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+    }
+}
+
+.gridCards {
+    
+}

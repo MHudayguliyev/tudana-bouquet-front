@@ -1,0 +1,190 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalBreakPoints.scss' as *;
+@use '../../styles/globalTypography.scss' as typography;
+@import "../../assets/config/mixins";
+
+
+.cardWrapper {
+   padding: 10px;
+   background-color: var(--main-bg);
+   border-radius: var(--border-radius);
+   min-width: 250px;
+}
+
+.cardChecked {
+   background-color: var(--cart-checked-bg);
+}
+
+.isSelectionMode {
+   cursor: pointer;
+   pointer-events: all;
+}
+
+.cardStatus_O_APG /* Ожидается согласование  */ {
+   border-left: 3px solid #7676a2;
+}
+
+.cardStatus_O_CLD /* Закрыт  */ {
+   border-left: 3px solid #e63900;
+}
+
+.cardStatus_O_RTC /* Готов к закрытию  */  {
+   border-left: 3px solid #669999;
+}
+.cardStatus_O_AED /* Ожидается аванс (до обеспечения)  */  {
+   border-left: 3px solid #ffa31a;
+}
+.cardStatus_O_EPN /* Ожидается обеспечение  */   {
+   border-left: 3px solid #ffa31a;
+}
+.cardStatus_O_RTS /* Готов к обеспечению  */   {
+   border-left: 3px solid #1a75ff;
+}
+.cardStatus_O_IPS /* В процессе отгрузки  */  {
+   border-left: 3px solid #00cc99;
+}
+.cardStatus_O_RFS /* Готов к отгрузке  */  {
+   border-left: 3px solid #00cc66;
+}
+.cardStatus_O_PPG /* Ожидается оплата (после отгрузки)  */  {
+   border-left: 3px solid #ff6600;
+}
+.cardStatus_O_APE /* Ожидается предоплата (до отгрузки) */  {
+   border-left: 3px solid #e600e6;
+}
+
+
+
+.cardFlex {
+   display: flex;
+   // justify-content: space-between;
+   justify-content: start;
+   align-items: center;
+   gap:10px;
+   width: 100%;
+   &:not(:first-child) {
+      margin-top: 5px;
+   }
+
+   // @media screen and (min-width: $tvDesktop) {
+   //    justify-content: flex-start;
+   // }
+}
+
+.cardItem {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   width: 300px;
+   @media screen and (min-width: $tvDesktop){
+      min-width: 170px;
+   }
+   @media screen and (max-width: $desktop) {
+      width: 185px;
+   }
+   @media screen and (max-width: $minDesktop) {
+      width: 155px;
+   }
+   @media screen and (max-width: $tablet) {
+      width: 250px;
+   }
+   @media screen and (max-width: $mobile) {
+      // width: 150px;
+      width: 200px
+   }
+
+}
+.cardItemMin {
+   @media screen and (max-width: 400px) {
+      width: 90px;
+   }
+}
+
+.cardIcon {
+   margin-right: 5px;
+   font-size: toRem(20);
+}
+
+.cardTxt {
+   font-size: toRem(14);
+   font-weight: typography.$fontWeightBold;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   @media screen and (max-width: $mobile) {
+      font-size: toRem(12);
+   }
+}
+
+.cardNettotal {
+   color: #00670A;
+}
+
+
+.ordStatus_O_APG /* Ожидается согласование  */ {
+   color: #7676a2;
+}
+
+.ordStatus_O_CLD /* Закрыт  */ {
+   color: #e63900;
+}
+
+.ordStatus_O_RTC /* Готов к закрытию  */  {
+   color: #669999;
+}
+.ordStatus_O_AED /* Ожидается аванс (до обеспечения)  */  {
+   color: #ffa31a;
+}
+.ordStatus_O_EPN /* Ожидается обеспечение  */   {
+   color: #ffa31a;
+}
+.ordStatus_O_RTS /* Готов к обеспечению  */   {
+   color: #1a75ff;
+}
+.ordStatus_O_IPS /* В процессе отгрузки  */  {
+   color: #00cc99;
+}
+.ordStatus_O_RFS /* Готов к отгрузке  */  {
+   color: #00cc66;
+}
+.ordStatus_O_PPG /* Ожидается оплата (после отгрузки)  */  {
+   color: #ff6600;
+}
+.ordStatus_O_APE /* Ожидается предоплата (до отгрузки) */  {
+   color: #e600e6;
+}
+
+
+.cardInline {
+   margin-top: 5px;
+   display: flex;
+   font-weight: 600;
+   font-size: 14px;
+}
+.cardInlineAddr {
+   word-wrap: break-word;
+   @include text-ellipsis(14px, 1.4, 2);
+   font-weight: 600;
+}
+.cardInlineAddr {
+   display: flex;
+   justify-content: row;
+}
+
+.borderTop {
+   border-top: 1px solid var(--txt-color);
+   padding-top: 5px;
+}
+.accordionActions {
+   display: flex;
+}
+
+.accordionActionIcon {
+   font-size: toRem(25);
+   color: var(--main-color-blue);
+   pointer-events: all;
+   cursor: pointer;
+   &:not(:last-child) {
+      margin-right: 20px;
+   }
+}

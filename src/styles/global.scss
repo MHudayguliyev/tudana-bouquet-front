@@ -1,0 +1,310 @@
+@use './globalBreakPoints.scss' as *;
+@use "./globalFunctions.scss" as *;
+@use "./globalTypography.scss" as typography;
+@use "./fonts.scss";
+
+
+:root {
+   --main-bg: #ffffff;
+   --second-bg: #fafafb;
+   --txt-color: #455560;
+   --txt-white: #fff;
+   --txt-placeholder: #ccc;
+   --main-color: #349eff;
+   --second-color: #62b4ff;
+   --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   --button-text-bg: rgba(0, 0, 0, 0.8);
+   --cart-checked-bg: #FFFBD3;
+   --icon-black-active: #fff;
+   --button-text-hover: rgba(0, 0, 0, 0.03);
+   // --button-text-hover: rgba(221, 22, 22, 0.03);
+
+
+   --main-bg-light: #ffffff;
+   --second-bg-light: #fafafb;
+   --txt-color-light: #455560;
+   --box-shadow-light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   --txt-placeholder-light: #ccc;
+   --button-text-bg-light: rgba(0, 0, 0, 0.05);
+   --cart-checked-bg-light: #FFFBD3;
+   --icon-black-active-light: #fff;
+   --button-text-hover-light: rgba(0, 0, 0, 0.05);
+
+   --main-bg-dark: #2d2d2d;
+   --second-bg-dark: #202020;
+   --txt-color-dark: #bbbbbb;
+   --box-shadow-dark: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+   --txt-placeholder-dark: rgb(83, 83, 83);
+   --button-text-bg-dark: rgba(255, 255, 255, 0.05);
+   --cart-checked-bg-dark: #666556;
+   --icon-black-active-dark: #455560;
+   --button-text-hover-dark: rgba(255, 255, 255, 0.05);
+   --scroll-color: rgb(235, 232, 232);
+
+   --main-color-blue: #349eff;
+   --second-color-blue: #62b4ff;
+
+   --main-color-red: #fb0b12;
+   --second-color-red: #ff4a6b;
+
+   --main-color-cyan: #10d4d2;
+   --second-color-cyan: #2ae9e6;
+
+   --main-color-green: #019707;
+   --second-color-green: #4caf50;
+
+   --main-color-orange: #d68102;
+   --second-color-orange: #fca11a;
+
+   --main-color-pink: #764abc;
+   --second-color-pink: #7e63a8;
+
+   --sidebar-width: 350px;
+   --border-radius: 15px;
+   --topnav-height: 70px;
+   --transition-cubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+   --button-text-active: rgba(0, 0, 0, 0.05);
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+   font-family: "Nunito", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   letter-spacing: 0.7px;
+   scrollbar-width: thin;
+   scroll-behavior: smooth;
+   // scrollbar-color: var(--primary) yellow;
+   overflow-y: overlay;
+   overflow-x: hidden;
+   margin: 0;
+   &::-webkit-scrollbar {
+     width: 8px;
+     background-color: transparent;
+   }
+   &::-webkit-scrollbar-track {
+     right: 5px;
+     border-radius: 5px;
+     background-color: transparent;
+   }
+   &::-webkit-scrollbar-track-piece {
+     background: transparent;
+   }
+   &::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+   }
+}
+
+
+
+a {
+   text-decoration: none;
+   color: unset;
+}
+
+a:hover {
+   color: var(--main-color);
+}
+
+button {
+   cursor: pointer;
+   border: 0;
+   outline: 0;
+   color: var(--txt-color);
+}
+
+ul {
+   list-style-type: none;
+}
+
+.modal-opened {
+   overflow: hidden;
+}
+
+
+@media screen and (min-width: $tablet) {
+   .dMdBlock {
+      display: block;
+   }
+   .dMdNone {
+      display: none;
+   }
+}
+
+@media screen and (max-width: $tablet) {
+   .dSmNone {
+      display: none;
+   }
+
+   .dSmBlock {
+      display: block;
+   }
+}
+
+
+.light-background {
+   background-color: var(--main-bg-light);
+   color: #000;
+}
+
+.dark-background {
+   background-color: var(--main-bg-dark);
+   color: #fff;
+}
+
+.blue-color {
+   background-color: var(--main-color-blue);
+   color: #fff;
+}
+
+.red-color {
+   background-color: var(--main-color-red);
+   color: #fff;
+}
+
+.cyan-color {
+   background-color: var(--main-color-cyan);
+   color: #fff;
+}
+
+.green-color {
+   background-color: var(--main-color-green);
+   color: #fff;
+}
+
+.orange-color {
+   background-color: var(--main-color-orange);
+   color: #fff;
+}
+
+$columns: 12;
+$gap: 30px;
+$breakpoints: (
+    xs: 480px,
+    sm: 768px,
+    md: 960px,
+    lg: 1170px,
+    xl: 1280px
+);
+
+@mixin create-selectors($breakpoint: null) {
+    $infix: if($breakpoint == null, '', '-#{$breakpoint}');
+
+    @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+            grid-column-end: span $i;
+        }
+        .col-offset#{$infix}-#{$i} {
+            grid-column-start: $i + 1;
+        }
+        .row#{$infix}-#{$i} {
+            grid-row-end: span $i;
+        }
+        .row-offset#{$infix}-#{$i} {
+            grid-row-start: $i + 1;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-gap: $gap;
+    gap: $gap;
+}
+
+@include create-selectors;
+
+@each $breakpoint, $width in $breakpoints {
+    @media (min-width: $width) {
+        @include create-selectors($breakpoint);
+    }
+}
+
+
+.rbc-toolbar {
+   display: flex;
+   flex-wrap: nowrap;
+}
+
+.rbc-calendar {
+   height: 550px;
+}
+
+.rbc-month-header {
+   margin-bottom: 10px;
+}
+
+.rbc-month-view {
+   border: none;
+}
+
+.rbc-day-bg  {
+   padding: 5px;
+   margin:5px;
+   border: 1px solid #ccc;
+   border-radius: var(--border-radius);
+}
+
+.rbc-date-cell {
+   flex: 1 1 0;
+   min-width: 0;
+   padding-top: 10px;
+   padding-left: 12px;
+   text-align: left;
+
+}
+
+.rbc-month-row + .rbc-month-row {
+   border: none;   
+}
+
+.rbc-event, .rbc-day-slot .rbc-background-event {
+   border: none;
+   box-sizing: border-box;
+   box-shadow: none;
+   margin: 0;
+   padding-left: 10px;
+   background-color:transparent;
+   border-radius: none;
+   color: var(--main-color); 
+   text-align: left;
+}
+
+.rbc-button-link {
+   font-size: 16px;
+   font-weight: 700;
+}
+
+.rbc-event-content {
+   font-weight: 700;
+   font-size: 24px;
+   margin-top: 5px;
+   margin-right: 5px;
+   text-align: center;
+}
+
+.rbc-event.rbc-selected {
+   background-color: white;
+   color: var(--main-color)
+}
+
+.rbc-toolbar-label, .rbc-btn-group {
+   font-family: "Nunito";
+   font-weight: 700;
+}
+
+.rbc-btn-group button {
+   font-size: typography.$fontSizeBig;
+}
+
+.rbc-btn-group button:first-child {
+   height: 1.9rem
+}

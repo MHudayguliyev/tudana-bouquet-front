@@ -1,0 +1,85 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalShapes.scss' as Gshapes;
+@use '../../styles/globalTypography.scss' as Gtypography;
+
+.noSuggestions {
+   color: #ccc;
+   font-size: toRem(Gtypography.$fontSizeMedium);
+   font-weight: Gtypography.$fontWeightMedium;
+   padding: toRem(10) toRem(15);
+}
+
+.suggestions {
+   position: absolute;
+   z-index: Gshapes.$dropDownZIndex;
+   list-style: none;
+   margin-top: 0;
+
+   padding-left: 0;
+   width: 100%;
+   max-height: toRem(250);
+   border-radius: var(--border-radius);
+   background-color: var(--main-bg);
+   margin-top: toRem(6);
+
+   overflow: hidden;
+   overflow-y: auto;
+   scrollbar-width: thin;
+   scroll-behavior: smooth;
+   scrollbar-color: var(--main-color);
+
+   &::-webkit-scrollbar {
+       width: 8px;
+       background-color: red;
+     }
+     &::-webkit-scrollbar-track {
+       right: 5px;
+       border-radius: 5px;
+       background-color: green;
+     }
+     &::-webkit-scrollbar-track-piece {
+       background: var(--scroll-color)
+     }
+     &::-webkit-scrollbar-thumb {
+       border-radius: 10px;
+       background-color: var(--main-color);
+     }
+
+}
+
+.suggestions li {
+   padding: toRem(10) toRem(15);
+   font-size: toRem(Gtypography.$fontSizeMedium);
+   font-weight: Gtypography.$fontWeightMedium;
+   word-wrap: break-word;
+}
+
+.suggestionActive,
+.suggestions li:hover {
+   cursor: pointer;
+   background-color: var(--button-text-hover);
+}
+
+.inputWrapper {
+   display: flex;
+   justify-content: space-between;
+   padding: toRem(5) toRem(5);
+   border-radius: var(--border-radius);
+   background-color: var(--main-bg);
+}
+
+.border {
+   border: toRem(1) solid #ccc;
+}
+
+.elevation {
+   // border: 1px solid #ccc;
+   // box-shadow: var(--box-shadow);
+   // -webkit-box-shadow: var(--box-shadow);
+   // -moz-box-shadow: var(--box-shadow);
+}
+
+.iconButton {
+   width: toRem(25);
+   height: toRem(25);
+}

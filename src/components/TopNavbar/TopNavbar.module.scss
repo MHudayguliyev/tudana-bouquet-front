@@ -1,0 +1,93 @@
+@use '../../styles/globalBreakPoints.scss' as *;
+@use '../../styles/globalShapes.scss' as shapes;
+
+.topnav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 5px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--topnav-height);
+  z-index: shapes.$fixedHeaderZIndex;
+  background-color: var(--main-bg);
+  box-shadow: var(--box-shadow);
+
+  padding-left: $sidebarWidthClose + 30px;
+
+  @media screen and (max-width: $tablet) {
+    padding-left: $sidebarWidthCloseMin + 10px;
+  }
+  @media screen and (max-width: 600px){
+    padding-left: 20px;
+  }
+}
+
+.topnav__right {
+  display: flex;
+  align-items: center;
+}
+
+.topnav__right_item~.topnav__right_item {
+  margin-left: 25px;
+
+  @media screen and (max-width: $mobile) {
+    margin-left: 18px;
+  }
+}
+
+.notification_item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.notification_item:hover {
+  background-color: var(--second-bg);
+}
+
+.notification_item>i {
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+.topnav__right_user {
+  display: flex;
+  align-items: center;
+}
+
+.topnav__right_user__image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  @media screen and (max-width: $tablet){
+    display: none;
+}
+}
+.topnav__right_user__image>img {
+  width: 100%;
+}
+
+.topnav__right_user__name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.sideBar {
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.menuIcon {
+  display: none;
+  cursor: pointer;
+  padding-right: 10px;
+  @media screen and (max-width: 600px) {
+     display: block;
+  }
+}

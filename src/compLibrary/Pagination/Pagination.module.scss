@@ -1,0 +1,113 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalShapes.scss' as Gshapes;
+@use '../../styles/globalTypography.scss' as Gtypography;
+
+
+$transparentizedValue: 0.8;
+$transparentizedSelectedValue: 0.5;
+
+.paginationWrapper {
+   display: flex;
+   align-items: center;
+}
+
+// button base style
+.buttonStyle {
+   font-weight: Gtypography.$fontWeightRegular;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 toRem(6);
+   background-image: linear-gradient(to right,
+         var(--main-color),
+         var(--second-color));
+   color: var(--txt-white);
+
+   &:hover {
+      opacity: 0.8;
+   }
+
+   &:active {
+      background-image: linear-gradient(to right,
+            var(--main-color),
+            var(--second-color));
+   }
+}
+
+//
+
+
+
+// button size 'small' | 'medium' | 'big'
+.buttonSizeSmall {
+   width: toRem(30);
+   height: toRem(30);
+}
+
+.buttonSizeMedium {
+   width: toRem(35);
+   height: toRem(35);
+}
+
+.buttonSizeBig {
+   width: toRem(40);
+   height: toRem(40);
+}
+
+//
+
+// button shape 'circular' | 'rounded'
+.buttonShapeCircular {
+   border-radius: 50%;
+}
+
+.buttonShapeRounded {
+   border-radius: toRem(--border-radius);
+}
+
+.pagebtn {
+   background-image: none !important;
+   background-color: rgba(204, 204, 204, 0.189) !important;
+   color: var(--txt-color) !important;
+
+   &:active {
+      background-image: linear-gradient(to right,
+            var(--main-color),
+            var(--second-color)) !important;
+      color: var(--txt-color) !important;
+   }
+
+   & .icon {
+      color: inherit;
+   }
+
+   &:active .icon {
+      color: var(--icon-black-active);
+   }
+}
+
+// disabled styles
+.disabled {
+   pointer-events: none;
+   background-image: none;
+   opacity: 0.5;
+}
+
+.disabled .icon {
+   color: var(--txt-color);
+}
+
+.icon {
+   font-size: 1.5rem;
+   display: flex;
+   color: var(--txt-white);
+}
+
+.selected {
+   color: var(--main-color);
+   border: 2px solid var(--main-color);
+   background-image: none;
+   background-color: transparent;
+   font-weight: bold;
+}

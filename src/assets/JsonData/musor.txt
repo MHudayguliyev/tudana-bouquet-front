@@ -1,0 +1,31 @@
+
+{
+  "display_name": "Products",
+  "route": "/10",
+  "icon": "bx bx-package",
+  "sub": []
+},
+{
+  "display_name": "Analytics",
+  "route": "/12",
+  "icon": "bx bx-bar-chart-alt",
+  "sub": []
+},
+{
+  "display_name": "categories",
+  "route": "/13",
+  "icon": "bx bx-list-ol",
+  "sub": []
+},
+{
+  "display_name": "discount",
+  "route": "/14",
+  "icon": "bx bx-gift",
+  "sub": []
+},
+{
+  "display_name": "inventory",
+  "route": "/15",
+  "icon": "bx bx-store-alt",
+  "sub": []
+},

@@ -1,0 +1,96 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalTypography.scss' as typography;
+
+.cardWrapper {
+    min-width: 230px;
+    box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background-color: var(--main-bg);
+    padding: 10px;
+    color: var(--txt-color);
+}
+
+.title {
+    font-size: toRem(typography.$fontSizeBig);
+    font-weight: typography.$fontWeightBold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.cardImageWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.cardImage {
+    height: auto;
+    width: 100%;
+    max-width: 150px;
+}
+
+.mtrlName {
+    font-size: toRem(typography.$fontSizeMedium);
+    font-weight: typography.$fontWeightRegular;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.attributeName {
+    color: var(--main-color-red);
+    font-size: toRem(typography.$fontSizeMedium);
+    font-weight: typography.$fontWeightBold;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.priceValue {
+    font-size: toRem(typography.$fontSizeMedium);
+    font-weight: typography.$fontWeightBold;
+}
+
+.calculationAreaFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: toRem(typography.$fontSizeBig);
+    font-weight: typography.$fontWeightBold;
+}
+
+.calculationArea {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    border-radius: 1000px;
+    background-image: radial-gradient(circle,
+            var(--second-color),
+            var(--main-color));
+}
+
+.icon {
+    font-size: toRem(24);
+    color: var(--txt-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.countInputStyle { 
+    width: 70px;
+    text-align: center;
+    color: #fff;
+}
+
+
+

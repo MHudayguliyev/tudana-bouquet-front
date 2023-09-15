@@ -1,0 +1,46 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalTypography.scss' as typography;
+
+.customTableRow {
+    border-bottom: .7px solid var(--txt-placeholder);
+}
+
+
+.customTableRow:hover {
+    background-color: transparent;
+}
+
+
+
+.calculationAreaFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: toRem(typography.$fontSizeBig);
+    font-weight: typography.$fontWeightBold;
+}
+
+.calculationArea {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    border-radius: 1000px;
+    background-image: radial-gradient(circle,
+            var(--second-color),
+            var(--main-color));
+}
+
+.icon {
+    font-size: toRem(24);
+    color: var(--txt-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.countInputStyle { 
+    width: 70px;
+    text-align: center;
+    color: #fff;
+}

@@ -1,0 +1,189 @@
+@use '../../styles/global.scss';
+@import "../../assets/config/mixins";
+
+.mainCard {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  row-gap: 0.7rem;
+}
+
+.isSelected {
+  background-color: var(--cart-checked-bg-light)
+}
+
+
+.imgWrapper {
+  @media screen and (max-width:900px) {
+    display: none;
+  }
+}
+.accordionActionIcon {
+  font-size: 1.6rem;
+  float: right;
+  color: var(--main-color-blue);
+  pointer-events: all;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.iconContent {
+  padding-right: 14px;
+}
+
+
+.gridCardHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+}
+.listCardHeaderWrappper {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 40px;
+  @media screen and (max-width: 900px) {
+    gap: 10px;
+  }
+}
+.headerTxtWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.headerWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 900px) {
+    justify-content: space-between;
+    flex-direction: column-reverse;
+
+  }
+}
+.fullName {
+  @include text-ellipsis(18px, 1.4, 2);
+}
+
+.fName {
+  @include text-ellipsis(18px, 1.4, 2);
+  @media screen and (max-width: 900px) {
+    @include text-ellipsis(16px, 1.4, 2);
+  }
+}
+
+
+.ellipsePhone {
+  @include text-ellipsis(18px, 1.4, 2);
+  @media screen and (max-width: 900px) {
+    @include text-ellipsis(14px, 1.4, 2);
+  }
+}
+.cardBody {
+  display: flex;
+  gap: 20px;
+}
+
+.listCardBody {
+  width: 33.3%;
+  display: flex;
+  gap: 20px;
+  @media screen and (max-width: 900px){
+    width: 50%;
+  }
+}
+
+.clientCardTbody {
+  display: flex;
+  width: auto;
+}
+.clientCode {
+  display: flex;
+  align-items: center;
+}
+.clientCode2 {
+  display: none;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.clientName {
+  display: flex;
+  align-items: center;
+}
+.clientName2 {
+  display: none;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    align-items: center;
+    // font-size: 14px;
+  }
+}
+
+.clientPhone {
+  display: flex;
+  align-items: center;
+}
+.clientAddress {
+  display: flex;
+  @media screen and (max-width: 900px){
+    // font-size: 14px;
+  }
+  .addr {
+    @include text-ellipsis(16px, 1.4, 2);
+    // height: auto;
+  }
+  .address {
+    @include text-ellipsis(18px, 1.4, 2);
+  }
+}
+.clientInfoList {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media screen and (max-width: 900px){
+    width: 50%;
+  }
+  
+ 
+}
+.clientInfoList2 {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media screen and (max-width: 900px){
+    width: 0;
+    display: none;
+  }
+}
+.clientInfoGrid {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+.extraInfoList {
+  display: flex;
+  flex-direction: flex-row;
+  justify-content: flex-start;
+  align-items: flex-center;
+  gap: 300px;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+}
+.extraInfoGrid {
+  display: flex;
+  flex-direction: flex-column;
+  gap: 20px;
+}
+

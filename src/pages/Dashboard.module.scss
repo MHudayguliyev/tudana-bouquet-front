@@ -1,0 +1,83 @@
+@use '../styles/globalBreakPoints.scss' as *;
+
+.tdStatus {
+    padding: 4px 8px;
+    color: var(--txt-white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+.tdStatusO_APG /* Ожидается согласование  */ {
+    background-color: #7676a2;
+    padding: 22px;
+}
+
+.tdStatusO_CLD /* Закрыт  */ {
+    background-color: #e63900;
+    padding: 22px;
+}
+
+.tdStatusO_RTC /* Готов к закрытию  */  {
+    background-color: #669999;
+    padding: 22px;
+}
+.tdStatusO_AED /* Ожидается аванс (до обеспечения)  */  {
+    background-color:  #ffa31a;
+    padding: 22px;
+}
+.tdStatusO_EPN /* Ожидается обеспечение  */   {
+    background-color: #ffa31a;
+}
+.tdStatusO_RTS /* Готов к обеспечению  */   {
+    background-color: #1a75ff;
+    padding: 22px;
+}
+.tdStatusO_IPS /* В процессе отгрузки  */  {
+    background-color: #00cc99;
+    padding: 22px;
+}
+.tdStatusO_RFS /* Готов к отгрузке  */  {
+    background-color: #00cc66;
+    padding: 22px;
+}
+.tdStatusO_PPG /* Ожидается оплата (после отгрузки)  */  {
+    background-color: #ff6600;
+    padding: 22px;
+}
+.tdStatusO_APE /* Ожидается предоплата (до отгрузки) */  {
+    background-color: #e600e6;
+    padding: 22px;
+}
+
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.chartHeight  {
+    height: 305px;
+}
+
+.tableHeight {
+    height: 416px;
+}
+@media screen and (min-width: $tvDesktop) {
+    .chartHeight {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: $tvDesktop) {
+        .tableHeight {
+            height: 416px;
+    }
+}
+
+

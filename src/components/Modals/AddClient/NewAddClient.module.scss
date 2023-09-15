@@ -1,0 +1,124 @@
+@use '../../../styles/globalBreakPoints.scss' as *;
+
+@use '../../../styles/globalFunctions.scss' as *;
+
+.addClientModal {
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formInputs {
+    // width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:15px;
+
+    @media screen and (max-width: $minDesktop) {
+        flex-direction: column;
+    }
+}
+
+.emptySection {
+    height: 25px;
+}
+
+.clientModal {
+    max-width: 750px
+}
+.inputTitle {
+    font-weight: bold;
+    color: var(--txt-color);
+}
+
+.inputInner {
+    width: 350px;
+    position: relative;
+    // height: 55px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.errorTxt {
+    color: var(--main-color-red);
+    // padding-left: 10px;
+    margin-bottom: 15px
+}
+.emptyField {
+    color: var(--main-color-green);
+    padding-left: 10px;
+}
+.codeSpan {
+    color: var(--txt-color);
+}
+
+.materialsModalFooter {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    @media screen and (max-width: $desktop) {
+      width: auto;
+    }
+}
+
+.buttonWrapperRight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // gap: 15px;
+    justify-content: space-between;
+  }
+  .generateCode {
+    margin-right: auto;
+  }
+  .btns {
+    display: flex;
+    gap: 15px;
+  }
+
+.formikInput {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.phoneNm {
+    position: absolute;
+    left: 3%;
+    color: var(--txt-color)
+}
+
+.phoneInpt {
+    padding-left: 50px;
+}
+
+.headerTxt {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.txt {
+    margin: auto;
+    font-size: 18px;
+}
+
+.modalClientBody {
+    // height: 50vh;
+    @media screen and (max-width:$minDesktop){
+        height: auto;
+    }
+  }
+  
+  #materialModalBody::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 3px;
+  }
+
+.inputStyle {
+    width: 100%;
+    background-color: transparent;
+}

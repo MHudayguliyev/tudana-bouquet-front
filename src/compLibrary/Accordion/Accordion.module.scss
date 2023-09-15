@@ -1,0 +1,52 @@
+@use "./../../styles/globalFunctions" as *;
+@use "./../../styles/globalTypography.scss" as typography;
+@use "./../../styles/globalAnimation.scss" as animation;
+
+
+.button {
+   border: 0;
+   border-radius: 50%;
+   width: toRem(30);
+   height: toRem(30);
+   background-color: transparent;
+   cursor: pointer;
+   pointer-events: all;
+   background-color: var(--button-text-bg);
+}
+
+.button>i {
+   font-size: toRem(30);
+}
+
+.mainBlock {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.icon {
+   display: flex;
+}
+
+.content {
+   margin-left: toRem(10);
+   font-size: toRem(typography.$fontSizeMedium);
+   font-weight: toRem(typography.$fontWeightBold);
+}
+
+
+
+// .notExpanded,
+// .expanded {
+//    padding: 0 toRem(14);
+// }
+
+.notExpanded {
+   overflow: hidden;
+   transition: ease 0.3s;
+}
+
+.expanded {
+   transition: ease 0.3s;
+   overflow: hidden;
+}

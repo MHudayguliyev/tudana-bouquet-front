@@ -1,0 +1,48 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalTypography.scss' as typography;
+
+.cardWrapper {
+    min-width: 230px;
+    min-height: 300px;
+    max-height: 300px;
+    box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background-color: var(--main-bg);
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.cardImageWrapper {
+    display: flex;
+    justify-content: center;
+}
+.cardImage {
+    height: 150px;
+}
+
+.title {
+    font-size: toRem(typography.$fontSizeBig);
+    font-weight: typography.$fontWeightBold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.countsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.countTxt {
+    font-size: toRem(typography.$fontSizeMedium);
+    font-weight: typography.$fontWeightRegular;
+}

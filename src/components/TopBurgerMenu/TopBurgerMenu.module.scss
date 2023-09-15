@@ -1,0 +1,56 @@
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/globalBreakPoints.scss' as *;
+@use '../../styles/globalShapes.scss' as Gshapes;
+
+.menuBurgerButton {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   padding: toRem(10);
+}
+
+.menuBurgerButtonStart {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   padding: 8px;
+   
+}
+.menuBurgerButtonStart {
+   @media screen and (max-width: $mobile) {
+      width: 50%;
+   }
+}
+
+.menuBurgerButtonStartIcon {
+   margin-right: toRem(6);
+
+}
+
+
+.menuBurgerWrapper {
+   width: 100%;
+   height: 100%;
+   z-index: Gshapes.$modalZIndex;
+   background-color: var(--main-bg);
+   overflow-y: auto;
+   overflow-x: hidden;
+   position: fixed;
+   top: 0;
+   left: 0;
+}
+
+.menuBurgerContent {
+   margin-top: toRem(50);
+   width: 100%;
+}
+
+.closeButton {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: toRem(52);
+   height: toRem(52);
+}

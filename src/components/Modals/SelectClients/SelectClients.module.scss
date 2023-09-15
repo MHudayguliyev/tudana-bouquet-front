@@ -1,0 +1,104 @@
+@use '../../../styles/globalBreakPoints.scss' as *;
+
+.selectedRow {
+    background-color: var(--main-color);
+    color: var(--icon-black-active);
+
+}
+
+h4 {
+    color: var(--txt-color);
+}
+
+.searchWrapper {
+    padding: 15px;
+    border: 1px solid #ccc;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.paginationLimit {
+    width: 100%;
+}
+
+.fullWidth {
+    height: 100%;
+}
+
+.topSide {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fixedHead {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.fixedHead table {
+    height: 97%
+}
+
+.fixedHead tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+}
+
+.fixedHead thead tr {
+    display: block;
+}
+
+.fixedHead th,
+.fixedHead td {
+    width: 300px;
+}
+
+.clientSelected {
+    background-color: var(--main-color);
+    color: var(--txt-white);
+}
+
+.cardList {
+    color: var(--txt-color);
+    height: 50vh;
+    margin-top:5px;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--main-color);
+ 
+    &::-webkit-scrollbar {
+        width: 8px;
+        background-color: red;
+      }
+      &::-webkit-scrollbar-track {
+        right: 5px;
+        border-radius: 5px;
+        background-color: green;
+      }
+      &::-webkit-scrollbar-track-piece {
+        background: var(--scroll-color)
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--main-color);
+      }
+}
+
+.buttonWrapperRight {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }

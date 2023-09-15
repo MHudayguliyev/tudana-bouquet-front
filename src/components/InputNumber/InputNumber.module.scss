@@ -1,0 +1,45 @@
+.inputNumberWrapper {
+    position: relative;
+}
+
+.inputNumberStyle {
+    width: 100%;
+    min-height: 30px;
+    padding: 5px 10px;
+    border: .7px solid grey;
+    border-radius: 15px;
+}
+
+.chevronButtonGroup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.chevronButtonGroup button {
+    font-size: 15px;
+    background-color: rgba(0,0,0, .1);
+    padding: 0 10px;
+    height: 100%;
+}
+
+.chevronButtonGroup button:hover {
+    background-color: gray;
+}
+
+.chevronButtonGroup button:active {
+    font-size: 16px;
+    transition: .7s ease all;
+}
+
+.chevronUp {
+    border-top-right-radius: 15px;
+}
+
+.chevronDown {
+    border-bottom-right-radius: 15px;
+}

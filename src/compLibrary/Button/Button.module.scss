@@ -1,0 +1,239 @@
+@use '../../styles/globalTypography.scss' as typography;
+@use '../../styles/globalFunctions.scss' as *;
+@use '../../styles/global.scss' as *;
+@use '../../styles/fonts.scss';
+
+
+.baseStyle {
+   cursor: pointer;
+   border: none;
+   padding: 0;
+}
+
+.btnBorder {
+   box-shadow: -1px 1px 20px -5px var(--main-color);
+}
+
+.colorBlue {
+   background-image: linear-gradient(to right,
+         var(--main-color-blue),
+         var(--second-color-blue));
+   color: var(--txt-white);
+
+   &:hover {
+      opacity: 0.8;
+   }
+
+   &:active {
+      opacity: 1;
+   }
+}
+
+.colorRed {
+   background-image: linear-gradient(to right,
+         var(--main-color-red),
+         var(--second-color-red));
+   color: var(--txt-white);
+
+   &:hover {
+      opacity: 0.8;
+   }
+
+   &:active {
+      opacity: 1;
+   }
+}
+
+.colorCyan {
+   background-image: linear-gradient(to right,
+         var(--main-color-cyan),
+         var(--second-color-cyan));
+   color: var(--txt-white);
+
+   &:hover {
+      opacity: 0.8;
+   }
+
+   &:active {
+      opacity: 1;
+   }
+}
+
+.colorGreen {
+   background-image: linear-gradient(to right,
+         var(--main-color-green),
+         var(--second-color-green));
+   color: var(--txt-white);
+
+   &:hover {
+      opacity: 0.8;
+   }
+
+   &:active {
+      opacity: 1;
+   }
+}
+
+.colorOrange {
+   background-image: linear-gradient(to right,
+         var(--main-color-orange),
+         var(--second-color-orange));
+   color: var(--txt-white);
+
+   &:hover {
+      opacity: 0.8;
+   }
+
+   &:active {
+      opacity: 1;
+   }
+}
+
+.colorGrey {
+   background-color: var(--button-text-hover) !important;
+}
+
+.colorTheme {
+   background-image: linear-gradient(to right,
+         var(--main-color),
+         var(--second-color));
+   color: var(--txt-white);
+
+   &:hover {
+      opacity: 0.8;
+   }
+
+   &:active {
+      opacity: 1;
+   }
+}
+
+.colorPink {
+   background-image: linear-gradient(to right,
+         var(--main-color-pink),
+         var(--second-color-pink));
+   color: var(--txt-white);
+
+   &:hover {
+      opacity: 0.8;
+   }
+
+   &:active {
+      opacity: 1;
+   }
+}
+
+.fullWidth {
+   width: 100%;
+}
+
+.fullHeight {
+   height: 100%;
+}
+
+.disable {
+   cursor: auto;
+   opacity: 0.5;
+}
+
+.baseChildStyle {
+   font-family: 'Nunito';
+   display: flex;
+   align-items: center;
+   flex-wrap: nowrap;
+   padding: 10px 10px;
+   font-size: toRem(typography.$fontSizeMedium);
+   font-weight: typography.$fontWeightMedium;
+}
+
+.baseChildStyle>i {
+   font-size: 1.2rem;
+}
+
+.centerComponent {
+   justify-content: center;
+}
+
+.paddingWithIcon {
+   padding: 10px 10px;
+}
+
+
+.removePadding {
+   padding: 0;
+}
+
+.pr1 {
+   display: flex;
+   align-items: center;
+   padding-right: 10px;
+}
+
+.pl1 {
+   display: flex;
+   align-items: center;
+   padding-left: 10px;
+}
+
+.removeUndueSpace {
+   display: flex;
+}
+
+.circle {
+   border-radius: 50%;
+}
+
+
+.rounded {
+   border-radius: var(--border-radius);
+}
+
+.topRounded {
+   border-top-left-radius: var(--border-radius);
+   border-top-right-radius: var(--border-radius);
+}
+
+.bottomRounded {
+   border-bottom-left-radius: var(--border-radius);
+   border-bottom-right-radius: var(--border-radius);
+}
+
+.leftRounded {
+   border-top-left-radius: var(--border-radius);
+   border-bottom-left-radius: var(--border-radius);
+}
+
+.rightRounded {
+   border-top-right-radius: var(--border-radius);
+   border-bottom-right-radius: var(--border-radius);
+}
+
+.removePadding {
+   padding: 0
+}
+
+.isIconContent {
+   width: 40px;
+   height: 40px;
+}
+
+
+.typeText {
+   background-color: transparent;
+
+   &:hover {
+      background-color: var(--button-text-hover);
+   }
+
+   &:active {
+      background-color: var(--button-text-active);
+   }
+}
+
+.link:hover {
+   color: var(--txt-white);
+}
+
+.tabActive {
+  border: 1px solid red;
+}

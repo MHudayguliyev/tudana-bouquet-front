@@ -1,0 +1,35 @@
+@use  '../../../styles/global.scss';
+.modalOrderDetailBody {
+    height: 50vh;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--main-color);
+ 
+    &::-webkit-scrollbar {
+        width: 8px;
+        background-color: red;
+      }
+      &::-webkit-scrollbar-track {
+        right: 5px;
+        border-radius: 5px;
+        background-color: green;
+      }
+      &::-webkit-scrollbar-track-piece {
+        background: var(--scroll-color)
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--main-color);
+      }
+  }
+  
+  #modalOrderDetailBody::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 3px;
+  }
+
+.tableRow {
+  border-bottom: .7px solid var(--txt-placeholder);
+}

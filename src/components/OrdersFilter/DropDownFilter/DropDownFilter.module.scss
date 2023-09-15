@@ -1,0 +1,113 @@
+@use '../../../styles/globalTypography.scss' as typography;
+@use '../../../styles/globalFunctions.scss' as *;
+@use '../../../styles/fonts.scss';
+@import "../../../assets/config/mixins";
+
+.toggleWrapper {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.toggleWrapper>i {
+   font-size: 1.5rem;
+}
+
+.toggleTitle {
+   font-family: 'Nunito';
+   font-weight: 500;
+   margin-right: 5px;
+   font-size: toRem(typography.$fontSizeBig);
+}
+
+
+.longToggleTitle {
+   text-align: start;
+   font-family: 'Nunito';
+   font-weight: 700;
+   @include text-ellipsis(16px, 1.4, 1);
+
+}
+
+.customElementWrapper, .customClientsElement {
+   padding: 12px;
+   width: 250px;
+}
+.customClientsElement {
+   width: 320px;
+}
+
+
+
+.searchWrapper {
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   padding: 5px;
+}
+
+.search {
+   width: 100%;
+}
+
+.itemsWrapper, .itemsClientsWrapper {
+   display: flex;
+   flex-direction: column;
+   max-width:  250px;
+   max-height: 200px;
+   overflow: hidden;
+   overflow-y: auto;
+   scrollbar-width: thin;
+   scroll-behavior: smooth;
+   scrollbar-color: var(--main-color);
+
+   &::-webkit-scrollbar {
+       width: 8px;
+       background-color: red;
+     }
+     &::-webkit-scrollbar-track {
+       right: 5px;
+       border-radius: 5px;
+       background-color: green;
+     }
+     &::-webkit-scrollbar-track-piece {
+       background: var(--scroll-color)
+     }
+     &::-webkit-scrollbar-thumb {
+       border-radius: 10px;
+       background-color: var(--main-color);
+     }
+}
+
+.itemsClientsWrapper {
+   max-width: 320px;
+}
+
+.iconWrapper {
+   width: 1.5rem;
+   height: 1.5rem;
+}
+
+.iconWrapper>i{
+   font-size: 1.5rem;
+}
+
+.icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 26px;
+   height: 26px;
+   font-size: 26px;
+}
+.itemsWrapper {
+   margin-top: 10px;
+   padding-top: 5px;
+}
+
+.preloader {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100px;
+}

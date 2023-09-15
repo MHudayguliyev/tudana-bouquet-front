@@ -1,0 +1,109 @@
+@use '../../styles/global.scss';
+@import "../../assets/config/mixins";
+
+
+.mainCard {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  row-gap: 0.7rem;
+
+  // .table {
+  //   max-width: 100%;
+  // }
+
+
+  .imgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .codeWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .trClientCard:hover {
+    background-color: transparent;
+  }
+}
+
+.accordionActionIcon {
+  font-size: 1.6rem;
+  color: var(--main-color-blue);
+  pointer-events: all;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.iconContent {
+  padding-right: 14px;
+}
+.txt {
+  font-size: toRem(12);
+  // white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+}
+
+.cardHeaderWrappper {
+  display: flex;
+  gap: 30px;
+}
+.headerTxtWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .clientBalance {
+    font-size: 12px;
+    color: red;
+  }
+}
+
+// .clientCardTbody > tr td {
+//     padding: 7px 0;
+//     text-align: left;
+// }
+
+.clientCardBody {
+    // list-style-position: outside;
+  }
+  .clientInfo {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .phone {
+    padding-bottom: 10px;
+    border: 1px solid red;
+  }
+
+////yutiyiy
+  .listCardHeaderWrappper {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 40px;
+    @media screen and (max-width: 900px) {
+      gap: 10px;
+    }
+  }
+
+  .addr {
+    @include text-ellipsis(16px, 1.4, 2);
+  }
+  

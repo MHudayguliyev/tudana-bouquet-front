@@ -1,0 +1,12 @@
+.sectionToPrint {
+    position: absolute; 
+    top: -9999em;
+    left: -9999em;
+    @media print {
+        visibility: visible;
+		width: 100%;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+    }
+}

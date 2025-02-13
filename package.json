@@ -5,7 +5,7 @@
   "type": "module",
   "main": "main.tsx",
   "scripts": {
-    "client": "vite",
+    "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
